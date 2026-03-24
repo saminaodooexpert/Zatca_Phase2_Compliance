@@ -1,4 +1,4 @@
-Python
+
 {
     'name': 'Saudi ZATCA Phase 2 Compliance',
     'version': '17.0.1.0.0',
