@@ -1,12 +1,39 @@
-from odoo import models, fields, api, _
-from odoo.exceptions import UserError
+<section class="oe_container">
+    <div class="oe_row oe_spaced" style="text-align: center;">
+        <h2 class="oe_slogan" style="color: #875A7B; font-weight: bold; font-size: 35px;">
+            Saudi ZATCA Phase 2 Compliance
+        </h2>
+        <h3 class="oe_slogan" style="opacity: 0.7;">
+            Smart VAT Validation for Seamless Invoicing
+        </h3>
+        <div class="oe_span12">
+            <p class="oe_mt32" style="font-size: 18px; line-height: 1.6;">
+                Ensure your business stays compliant with Saudi Arabia's ZATCA Phase 2 regulations. 
+                This module automatically validates that a Customer VAT number is present 
+                before any invoice is posted, preventing legal and accounting errors.
+            </p>
+        </div>
+    </div>
+</section>
 
-class AccountMove(models.Model):
-    _inherit = 'account.move'
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h4 class="oe_slogan" style="font-weight: bold; font-size: 28px;">Main Features</h4>
+        <div style="font-size: 18px; margin-left: 10%; margin-right: 10%;">
+            <ul style="list-style-type: check;">
+                <li style="margin-bottom: 10px;"><b>Automatic Validation:</b> Checks for VAT numbers during the "Post" action.</li>
+                <li style="margin-bottom: 10px;"><b>Clear Error Messages:</b> Guides users to fix missing data instantly.</li>
+                <li style="margin-bottom: 10px;"><b>Fully Compatible:</b> Optimized for Odoo 17 Community and Enterprise.</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-    def action_post(self):
-        for move in self:
-            if move.move_type in ['out_invoice', 'out_refund']:
-                if not move.partner_id.vat:
-                    raise UserError(_("ZATCA Phase 2 Error: Customer VAT number is missing! Please add it before confirming."))
-        return super(AccountMove, self).action_post()
+<section class="oe_container">
+    <div class="oe_row oe_spaced" style="text-align: center;">
+        <h4 class="oe_slogan">Developed by</h4>
+        <p style="font-size: 20px; font-weight: bold; color: #875A7B;">
+            Shameena Moin Qaisar
+        </p>
+    </div>
+</section>
